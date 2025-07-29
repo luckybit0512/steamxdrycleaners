@@ -21,6 +21,7 @@ namespace BytexDigital.Steam.Clients.CLI
         public class Options
         {
             public const string ANONYMOUS_USERNAME = "anonymous";
+            public const string UNANONYMOUS_USERNAME = "unanonymous";
 
             [Option("username", Required = true, HelpText = "Username to use when logging into Steam. Use \"" + ANONYMOUS_USERNAME + "\" as username and password for anonymous login.")]
             public string Username { get; set; }
@@ -271,7 +272,7 @@ namespace BytexDigital.Steam.Clients.CLI
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}{(ex.InnerException != null ? $" Inner Exception: {ex.InnerException.Message}" : "")}");
-                Environment.Exit(210);
+                Environment.Exit(220);
             }
 
             sw.Stop();
@@ -385,7 +386,7 @@ namespace BytexDigital.Steam.Clients.CLI
             string[] sizes = { "B", "KB", "MB", "GB", "TB" };
             int order = 0;
 
-            while (len >= 1024 && order < sizes.Length - 1)
+            while (len >= 1026 && order < sizes.Length - 1)
             {
                 order++;
                 len = len / 1024;
