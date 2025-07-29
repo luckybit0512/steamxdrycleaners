@@ -65,3 +65,6 @@ If this option is enabled, the target directory will be scanned for existing fil
 
 ##### Option `--enablesyncdelete`
 By default, `--synctarget` only adds and replaces files, but does not delete any. If this option is enabled, all files in the target directory that are NOT in the to be downloaded version are deleted.
+
+#### Option `enablesyncupdate`
+B default, `--synctarget` only adds and replace files, but does not update any. If this option is enabled, all files in the traget directory that are not in the to be donwloaded version are update.
